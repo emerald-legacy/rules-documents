@@ -25,16 +25,31 @@ COMMON_ATTRIBUTES = {
   'compress' => '',
   'language' => 'EN',
   'imagesdir' => IMAGES_DIR,
-  # The HTML theme is linked rather than embedded, so both documents share one
-  # cached stylesheet. copy_theme puts it in the build directory next to the
-  # webfonts and border tiles it references, so Asciidoctor must not copy it.
-  'stylesdir' => '.',
-  'stylesheet' => 'el.css',
-  'linkcss' => '',
-  'copycss!' => '',
   'pdf-themesdir' => File.expand_path(PDF_THEME_DIR),
   'pdf-fontsdir' => "#{File.expand_path(PDF_FONTS_DIR)},GEM_FONTS_DIR",
   'pdf-theme' => 'el@'
+}.freeze
+
+# Where the published Emerald Edict lives. The web version links to the copy
+# sitting next to it in the same build; the PDF has to reach the published one,
+# since a reader may have the file anywhere.
+EDICT_URL = 'https://emerald-legacy.github.io/rules-documents/Emerald%20Edict.pdf'
+
+BACKEND_ATTRIBUTES = {
+  'html5' => {
+    'edict-url' => 'Emerald%20Edict.html',
+    # The HTML theme is linked rather than embedded, so both documents share
+    # one cached stylesheet. copy_theme puts it in the build directory next to
+    # the webfonts and border tiles it references, so Asciidoctor must not
+    # copy it there itself.
+    'stylesdir' => '.',
+    'stylesheet' => 'el.css',
+    'linkcss' => '',
+    'copycss!' => ''
+  },
+  'pdf' => {
+    'edict-url' => EDICT_URL
+  }
 }.freeze
 
 # Clean tasks
@@ -53,7 +68,7 @@ def convert_document(source_file, output_dir)
       base_dir: BASE_DIR,
       to_dir: absolute_output,
       mkdirs: true,
-      attributes: COMMON_ATTRIBUTES
+      attributes: COMMON_ATTRIBUTES.merge(BACKEND_ATTRIBUTES.fetch(backend))
     )
   end
 end
