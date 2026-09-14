@@ -454,7 +454,7 @@ Eminent is a keyword ability that can be found on province cards. A province wit
 The phrase "enters play" refers to any time a card makes a transition from an out-of-play area or state into play. Playing a card and putting a card into play by using a card ability are two means by which a card may enter play.
 
 === Ephemeral
-_Ephemeral_ is a keyword ability found on event and attachment cards.
+Ephemeral is a keyword ability found on event and attachment cards.
 On events, it means that after the card has been played, it is removed from the game.
 On attachments, it means that when the attachment leaves play, it is removed from the game.
 In either case, effects that would normally put the card in another out-of-play area cannot prevent the card being removed from the game.
