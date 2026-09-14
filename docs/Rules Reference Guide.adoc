@@ -1525,6 +1525,9 @@ entire ability may initiate. If there are no valid targets at the
 time such targets would be chosen, that aspect of the effect
 fails to resolve.
 
+=== Thriving
+_Thriving_ is a keyword ability found on Dynasty cards.
+It means when the fate phase ends, if this is the only card in this province, fill this province with 1 facedown dynasty card.
 
 === The word "To"
 If the effect text of a card ability includes the word "to," then the
@@ -1536,10 +1539,6 @@ post-to aspect of that effect resolves simultaneously with all
 other effects of that card ability.
 - If the pre-to aspect of an effect does not successfully resolve in
 full, the post-to aspect's resolution is canceled.
-
-=== Thriving
-_Thriving_ is a keyword ability found on Dynasty cards.
-It means when the fate phase ends, if this is the only card in this province, fill this province with 1 facedown dynasty card.
 
 === Token Pool, General Token Pool
 
