@@ -10,6 +10,9 @@
 = image:el_logo.png[pdfwidth=70%,role=center]pass:q[<br>]Emerald Edict
 Emerald Legacy
 
+//  role="new"
+// role="new line-through"
+
 :show-link-uri!:
 
 [.metadata.text-center]
@@ -24,10 +27,6 @@ You may only include one restricted card in your deck.
 Changes to the previous version are marked in [.new]#bold and green.#
 
 
-[cols="1a,1a",stripes=none,frame=none,grid=none]
-|===
-|
-:show-link-uri!:
 == Banned Cards
 === image:mons/neutral.svg[width=20] [.neutral]#Neutral#
 * https://www.emeralddb.org/card/accursed-summoning[Accursed Summoning]
@@ -42,34 +41,6 @@ Changes to the previous version are marked in [.new]#bold and green.#
 * https://www.emeralddb.org/card/slovenly-scavenger[Slovenly Scavenger]
 * https://www.emeralddb.org/card/unveiled-corruption[Unveiled Corruption]
 * https://www.emeralddb.org/card/way-of-the-warrior[Way of the Warrior]
-
-|
-:show-link-uri!:
-== Restricted cards
-=== image:mons/neutral.svg[width=20] [.neutral]#Neutral#
-* https://www.emeralddb.org/card/contested-countryside[Contested Countryside]
-* https://www.emeralddb.org/card/proving-ground[Proving Ground]
-* https://www.emeralddb.org/card/those-who-serve[Those Who Serve]
-
-
-=== image:mons/crab.svg[width=20] [.crab]#Crab#
-* https://www.emeralddb.org/card/butcher-of-the-fallen[Butcher of the Fallen]
-* https://www.emeralddb.org/card/levy-2[Levy]
-* https://www.emeralddb.org/card/smuggling-deal[Smuggling Deal]
-
-=== image:mons/crane.svg[width=20] [.crane]#Crane#
-* https://www.emeralddb.org/card/kakita-toshimoko[Kakita Toshimoko]
-* https://www.emeralddb.org/card/preeminent-decree[Preeminent Decree]
-* https://www.emeralddb.org/card/tsuma[Tsuma]
-
-=== image:mons/dragon.svg[width=20] [.dragon]#Dragon#
-* https://www.emeralddb.org/card/adorned-temple[Adorned Temple]
-* https://www.emeralddb.org/card/foothills-keep[Foothills Keep]
-* https://www.emeralddb.org/card/revered-bonsho[Revered Bonsho]
-
-|
-:show-link-uri!:
-== Banned Cards
 
 === image:mons/crane.svg[width=20] [.crane]#Crane#
 * https://www.emeralddb.org/card/doji-diplomat[Dōji Diplomat]
@@ -103,10 +74,29 @@ Changes to the previous version are marked in [.new]#bold and green.#
 * https://www.emeralddb.org/card/scouted-terrain[Scouted Terrain]
 * https://www.emeralddb.org/card/utaku-tetsuko[Utaku Tetsuko]
 
-a|
-:show-link-uri!:
+<<<
 
-== Restricted cards
+== Restricted Cards
+=== image:mons/neutral.svg[width=20] [.neutral]#Neutral#
+* https://www.emeralddb.org/card/contested-countryside[Contested Countryside]
+* https://www.emeralddb.org/card/proving-ground[Proving Ground]
+* https://www.emeralddb.org/card/those-who-serve[Those Who Serve]
+
+=== image:mons/crab.svg[width=20] [.crab]#Crab#
+* https://www.emeralddb.org/card/butcher-of-the-fallen[Butcher of the Fallen]
+* https://www.emeralddb.org/card/levy-2[Levy]
+* https://www.emeralddb.org/card/smuggling-deal[Smuggling Deal]
+
+=== image:mons/crane.svg[width=20] [.crane]#Crane#
+* https://www.emeralddb.org/card/kakita-toshimoko[Kakita Toshimoko]
+* https://www.emeralddb.org/card/preeminent-decree[Preeminent Decree]
+* https://www.emeralddb.org/card/tsuma[Tsuma]
+
+=== image:mons/dragon.svg[width=20] [.dragon]#Dragon#
+* https://www.emeralddb.org/card/adorned-temple[Adorned Temple]
+* https://www.emeralddb.org/card/foothills-keep[Foothills Keep]
+* https://www.emeralddb.org/card/revered-bonsho[Revered Bonsho]
+
 === image:mons/lion.svg[width=20] [.lion]#Lion#
 * https://www.emeralddb.org/card/feeding-an-army[Feeding an Army]
 * https://www.emeralddb.org/card/hayaken-no-shiro[Hayaken no Shiro]
@@ -116,7 +106,6 @@ a|
 * https://www.emeralddb.org/card/asako-kousuke[Asako Kousuke]
 * https://www.emeralddb.org/card/isawa-tsuke-2[Isawa Tsuke 2]
 * https://www.emeralddb.org/card/secluded-shrine[Secluded Shrine]
-
 
 === image:mons/scorpion.svg[width=20] [.scorpion]#Scorpion#
 * https://www.emeralddb.org/card/dispatch-to-nowhere[Dispatch to Nowhere]
@@ -128,7 +117,6 @@ a|
 * https://www.emeralddb.org/card/ride-at-dawn[Ride at Dawn]
 * https://www.emeralddb.org/card/shinjo-yasamura[Shinjo Yasamura]
 
-|===
 
 <<<
 
@@ -142,11 +130,6 @@ Rotated are all cards of the https://www.emeralddb.org/cards?cycle=core[original
 and the https://www.emeralddb.org/cards?cycle=inheritance[complete Inheritance Cycle].
 In addition, the following cards are rotated because they were replaced with slightly different cards in https://www.emeralddb.org/cards?pack=restoration-of-balance[Restoration of Balance].
 
-[cols="1a,1a",stripes=none,frame=none,grid=none]
-|===
-
-|
-:show-link-uri!:
 === image:mons/neutral.svg[width=20] [.neutral]#Neutral#
 * https://www.emeralddb.org/card/awakened-tsukumogami[Awakened Tsukumogami]
 * https://www.emeralddb.org/card/insightful-gatekeeper[Insightful Gatekeeper]
@@ -168,15 +151,12 @@ In addition, the following cards are rotated because they were replaced with sli
 * https://www.emeralddb.org/card/swell-of-seafoam[Swell of Seafoam]
 * https://www.emeralddb.org/card/unquestioned-heritage[Unquestioned Heritage]
 
-
 === image:mons/lion.svg[width=20] [.lion]#Lion#
 * https://www.emeralddb.org/card/exposed-courtyard[Exposed Courtyard]
 * https://www.emeralddb.org/card/ikoma-tsanuri[Ikoma Tsanuri]
 * https://www.emeralddb.org/card/in-service-to-my-lord[In Service to My Lord]
 * https://www.emeralddb.org/card/logistics[Logistics]
 
-|
-:show-link-uri!:
 === image:mons/phoenix.svg[width=20] [.phoenix]#Phoenix#
 * https://www.emeralddb.org/card/embrace-the-void[Embrace the Void]
 * https://www.emeralddb.org/card/jurojin-s-curse[Jurōjin's Curse]
@@ -192,5 +172,3 @@ In addition, the following cards are rotated because they were replaced with sli
 * https://www.emeralddb.org/card/command-by-name[Command by Name]
 * https://www.emeralddb.org/card/daikyu[Daikyū]
 * https://www.emeralddb.org/card/khanbulak-benefactor[Khanbulak Benefactor]
-
-|===
