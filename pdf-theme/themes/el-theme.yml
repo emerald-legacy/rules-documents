@@ -219,7 +219,7 @@ table:
     padding: [2, 6, 2, 6]
 toc:
   indent: $horizontal_rhythm
-  line_height: 1.8
+  line_height: 1.35
   dot_leader:
     #content: ". "
     font_color: a9a9a9
