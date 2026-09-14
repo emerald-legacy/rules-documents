@@ -10,6 +10,7 @@ BASE_DIR = 'docs'
 SOURCE_DIR = 'docs'
 BUILD_DIR = 'build'
 IMAGES_DIR = 'images'
+HTML_THEME_DIR = 'html-theme'
 PDF_THEME_DIR = 'pdf-theme/themes'
 PDF_FONTS_DIR = 'pdf-theme/fonts'
 
@@ -17,12 +18,20 @@ PDF_FONTS_DIR = 'pdf-theme/fonts'
 # Attributes ending in '@' are soft-set, so a document header may override them
 # (the Emerald Edict selects its own PDF theme, for example).
 COMMON_ATTRIBUTES = {
-  'icons' => 'font',
-  'icon-set' => 'fas',
+  # Neither document uses an admonition or an icon macro, so the font-based
+  # icons only bought a Font Awesome request from a CDN on every page view.
+  'icons!' => '',
   'media' => 'screen',
   'compress' => '',
   'language' => 'EN',
   'imagesdir' => IMAGES_DIR,
+  # The HTML theme is linked rather than embedded, so both documents share one
+  # cached stylesheet. copy_theme puts it in the build directory next to the
+  # webfonts and border tiles it references, so Asciidoctor must not copy it.
+  'stylesdir' => '.',
+  'stylesheet' => 'el.css',
+  'linkcss' => '',
+  'copycss!' => '',
   'pdf-themesdir' => File.expand_path(PDF_THEME_DIR),
   'pdf-fontsdir' => "#{File.expand_path(PDF_FONTS_DIR)},GEM_FONTS_DIR",
   'pdf-theme' => 'el@'
@@ -71,6 +80,18 @@ task :copy_images do
   end
 end
 
+# Task to copy the HTML theme (stylesheet, webfonts, border tiles)
+desc 'Copy the HTML theme to the build directory'
+task :copy_theme do
+  if Dir.exist?(HTML_THEME_DIR)
+    puts "Copying #{HTML_THEME_DIR}..."
+    FileUtils.mkdir_p(BUILD_DIR)
+    FileUtils.cp_r("#{HTML_THEME_DIR}/.", BUILD_DIR)
+  else
+    puts "Warning: #{HTML_THEME_DIR} not found"
+  end
+end
+
 # Task to render all rules documents
 desc 'Render all rules documents to PDF and HTML'
 task :render_rules_documents do
@@ -86,7 +107,7 @@ end
 
 # Main build task
 desc 'Build all rules documents'
-task :build => [:render_rules_documents, :copy_images] do
+task :build => [:render_rules_documents, :copy_images, :copy_theme] do
   puts "\nBuild completed successfully!"
   puts "Output directory: #{BUILD_DIR}"
 end
