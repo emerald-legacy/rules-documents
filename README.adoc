@@ -51,8 +51,13 @@ Available Rake tasks:
 - `rake build` - Build all rules documents
 - `rake render_rules_documents` - Render all rules documents to PDF and HTML
 - `rake copy_images` - Copy the images to the build directory
+- `rake copy_theme` - Copy the HTML theme to the build directory
 - `rake clean` - Remove generated HTML and PDF files
 - `rake clobber` - Remove the entire build directory
+
+The PDF styling lives in `pdf-theme/`, the HTML styling in `html-theme/`
+(`el.css` plus the webfonts and border tiles it references). Both documents
+share one stylesheet.
 
 == Maintainers
 This repository is currently maintained by Ben Wolf (Hida Amoro, programming-wolf).
