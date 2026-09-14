@@ -4,8 +4,8 @@
 :chapter-label:
 :page-background-image: image:rrg_background_flat.jpg[fit=fill, pdfwidth=100%]
 :pdf-theme: el-edict-theme.yml
-:revnumber: 13
-:revdate: August 23, 2025
+:revnumber: 14
+:revdate: September 8, 2026
 
 = image:el_logo.png[pdfwidth=70%,role=center]pass:q[<br>]Emerald Edict
 Emerald Legacy
