@@ -68,6 +68,13 @@ role:
   emeralddbsm:
     font_family: EmeraldDB
     font_size: 8
+  # Phase Sequence Timing Chart. The cell fills come from cellbgcolor in the
+  # document; these give the labels inside them their colour.
+  tc-window:
+    font_color: a4460b
+    font_style: bold
+  tc-loop:
+    font_color: 4e2e6a
 
 # correct line height for Noto Serif metrics (comes with built-in line height)
 vertical_rhythm: $base_line_height_length

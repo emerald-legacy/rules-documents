@@ -33,6 +33,10 @@ page:
   margin_inner: 1.1cm
   margin_outer: 1.1cm
   size: A4
+  # The card lists used to be laid out by hand in a two-column Asciidoc table,
+  # which repeated every "Banned Cards" / "Restricted Cards" heading once per
+  # column. The PDF flows them itself now, so the source can stay a single list.
+  columns: 2
 base:
   align: left
   # color as hex string (leading # is optional)
