@@ -652,23 +652,36 @@ hr {
 
 /* With the page running the full width of the window and the lists now one
    continuous run per section, the clan blocks flow into as many columns as
-   fit. The prose that introduces a section stays across the full width. */
+   fit. The prose that introduces a section stays across the full width.
+
+   Each clan sits in a one-cell table in the source, which is what keeps it
+   whole across a column break in the PDF; here that table is stripped back to
+   nothing so only the block inside it shows. */
 body:not(.toc2) #content { max-width: 100%; }
 
-#content .sectionbody:has(> .sect2 > h3 > .image) {
+#content .sectionbody:has(table.clan-block) {
   columns: 17rem;
   column-gap: 2.75rem;
 }
-#content .sectionbody:has(> .sect2 > h3 > .image) > .paragraph,
-#content .sectionbody:has(> .sect2 > h3 > .image) > .ulist {
+#content .sectionbody:has(table.clan-block) > .paragraph,
+#content .sectionbody:has(table.clan-block) > .ulist {
   column-span: all;
 }
-#content .sect2:has(> h3 > .image) {
+
+#content table.clan-block {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-collapse: collapse;
   break-inside: avoid;
   page-break-inside: avoid;
 }
-/* A column must not open on a heading's underhang. */
-#content .sectionbody:has(> .sect2 > h3 > .image) > .sect2:first-child > h3 { margin-top: 0; }
+#content table.clan-block > tbody > tr > td {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+#content table.clan-block col { width: auto; }
 
 /* Card entries. A ban list is read by running down it for one card name, so
    the rows are tight and the whole row responds to the pointer. */
