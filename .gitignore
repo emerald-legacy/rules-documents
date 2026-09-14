@@ -3,6 +3,6 @@
 .gradle
 build
 .idea
-stories.iml
+rules-documents.iml
 .settings/org.eclipse.buildship.core.prefs
 .project
