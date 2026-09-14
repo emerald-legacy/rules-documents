@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="generator" content="Asciidoctor 2.0.26">
 <title>Rules Reference</title>
-<style>
-
-</style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./el.css">
 </head>
 <body class="article toc2 toc-right">
 <div id="header">
 <h1><span class="image center"><img src="images/el_logo.png" alt="el logo"></span><br>Rules Reference</h1>
 <div class="details">
-<span id="revnumber">version 5.0,</span>
-<span id="revdate">May 10, 2025</span>
+<span id="revnumber">version 6.0,</span>
+<span id="revdate">September 8, 2026</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -77,6 +74,7 @@
 <li><a href="#_effects">Effects</a></li>
 <li><a href="#_eminent">Eminent</a></li>
 <li><a href="#_enters_play">Enters Play</a></li>
+<li><a href="#_ephemeral">Ephemeral</a></li>
 <li><a href="#_event_cards">Event Cards</a></li>
 <li><a href="#_facedown_province">Facedown Province</a></li>
 <li><a href="#_fate">Fate</a></li>
@@ -98,6 +96,7 @@
 <li><a href="#_in_play_and_out_of_play">In Play and Out of Play</a></li>
 <li><a href="#_influence_influence_cost">Influence, Influence Cost</a></li>
 <li><a href="#_initiating_abilities_playing_cards">Initiating Abilities / Playing Cards</a></li>
+<li><a href="#_injure">Injure</a></li>
 <li><a href="#_in_player_order">In Player Order</a></li>
 <li><a href="#_interrupts">Interrupts</a></li>
 <li><a href="#_keywords">Keywords</a></li>
@@ -121,6 +120,7 @@
 <li><a href="#_own_ownership">Own, Ownership</a></li>
 <li><a href="#_participating_and_cannot_participate">Participating and Cannot Participate</a></li>
 <li><a href="#_pass">Pass</a></li>
+<li><a href="#_peaceful">Peaceful</a></li>
 <li><a href="#_personal_honor_personal_dishonor">Personal Honor, Personal Dishonor</a></li>
 <li><a href="#_play_and_put_into_play">Play and Put into Play</a></li>
 <li><a href="#_play_restrictions_and_permissions">Play Restrictions and Permissions</a></li>
@@ -163,6 +163,7 @@
 <li><a href="#_take">Take</a></li>
 <li><a href="#_tainted_tainted_status_token">Tainted, Tainted Status Token</a></li>
 <li><a href="#_target">Target</a></li>
+<li><a href="#_thriving">Thriving</a></li>
 <li><a href="#_the_word_to">The word "To"</a></li>
 <li><a href="#_token_pool_general_token_pool">Token Pool, General Token Pool</a></li>
 <li><a href="#_traits">Traits</a></li>
@@ -183,6 +184,7 @@
 <li><a href="#_framework_steps">Framework Steps</a></li>
 <li><a href="#_action_windows">Action Windows</a></li>
 <li><a href="#_reactions_and_interrupts">Reactions and Interrupts</a></li>
+<li><a href="#_i_dynasty_phase">I. Dynasty Phase</a></li>
 <li><a href="#_ii_draw_phase">II. Draw Phase</a></li>
 <li><a href="#_iii_conflict_phase">III. Conflict Phase</a></li>
 <li><a href="#_conflict_resolution">Conflict Resolution</a></li>
@@ -232,7 +234,7 @@
 <h2 id="_rules_reference">Rules Reference</h2>
 <div class="sectionbody">
 <div class="paragraph metadata text-center">
-<p>Version 5.0 – May 10, 2025</p>
+<p>Version 6.0 – September 8, 2026</p>
 </div>
 <div class="paragraph">
 <p>This document is intended as the definitive source for rules information for the Emerald Legacy, the fan continuation of Fantasy Flight Games' Legend of the 5 Rings LCG.
@@ -1305,6 +1307,15 @@ that player may spend during deckbuilding.</p>
 </div>
 </div>
 <div class="sect2">
+<h3 id="_ephemeral">Ephemeral</h3>
+<div class="paragraph">
+<p><em>Ephemeral</em> is a keyword ability found on event and attachment cards.
+On events, it means that after the card has been played, it is removed from the game.
+On attachments, it means that when the attachment leaves play, it is removed from the game.
+In either case, effects that would normally put the card in another out-of-play area cannot prevent the card being removed from the game.</p>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_event_cards">Event Cards</h3>
 <div class="paragraph">
 <p>Event cards represent tactical acts and maneuvers, court intrigues, spells, supernatural occurrences, and other unexpected developments that might occur during a game.</p>
@@ -1795,6 +1806,15 @@ amount of honor a player has at any given time is represented (as open informati
 </div>
 </div>
 <div class="sect2">
+<h3 id="_injure">Injure</h3>
+<div class="paragraph">
+<p>When a game effect instructs a player to injure a character it means:</p>
+</div>
+<div class="paragraph">
+<p>"If the character has no fate on it, discard it. Otherwise, remove 1 fate from it."</p>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_in_player_order">In Player Order</h3>
 <div class="paragraph">
 <p>If the players are instructed to perform a sequence "in player order," the first player performs their part of the sequence first, followed by the player to the first player&#8217;s left and continuing in clockwise order.
@@ -2207,6 +2227,13 @@ possessing none of those traits.</p>
 <p>When passing an opportunity to declare a conflict, a player is not required to specify which type of conflict he or she is passing.</p>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_peaceful">Peaceful</h3>
+<div class="paragraph">
+<p><em>Peaceful</em> is a keyword ability found on event and attachment cards.
+It means that this card cannot be played during a conflict.</p>
 </div>
 </div>
 <div class="sect2">
@@ -3439,6 +3466,13 @@ fails to resolve.</p>
 </div>
 </div>
 <div class="sect2">
+<h3 id="_thriving">Thriving</h3>
+<div class="paragraph">
+<p><em>Thriving</em> is a keyword ability found on Dynasty cards.
+It means when the fate phase ends, if this is the only card in this province, fill this province with 1 facedown dynasty card.</p>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_the_word_to">The word "To"</h3>
 <div class="paragraph">
 <p>If the effect text of a card ability includes the word "to," then the
@@ -4042,120 +4076,189 @@ immediately after the completion of any framework step.</p>
 the resolution of that step, interrupting the process of that step.</p>
 </div>
 <div style="page-break-after: always;"></div>
-<div class="sidebarblock">
-<div class="content">
-<table class="tableblock frame-none grid-all stripes-all stretch">
+</div>
+<div class="sect2">
+<h3 id="_i_dynasty_phase">I. Dynasty Phase</h3>
+<table class="tableblock frame-none grid-none stripes-none stretch timing-chart">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="sect2">
-<h3 id="_i_dynasty_phase">I. Dynasty Phase<br></h3>
-
-</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>1.1</strong> Dynasty phase begins.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>1.1</strong> Dynasty phase begins.<br></p>
-</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>1.2</strong> Reveal facedown dynasty cards.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>1.2</strong> Reveal facedown dynasty cards.<br></p>
-</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>1.3</strong> Collect fate.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>1.3</strong> Collect fate.<br></p>
-</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #f7e2d0;"><p class="tableblock"><span class="tc-window">1.4 SPECIAL ACTION WINDOW</span><br>
+Players alternate playing cards from provinces/hand and/or triggering Action abilities.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>1.4 SPECIAL ACTION WINDOW</strong><br>
-Players alternate playing cards from provinces/hand and/or triggering Action abilities.<br></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>1.5</strong> Dynasty phase ends.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph text-center">
-<p><strong><em>Proceed to Draw Phase.</em></strong></p>
-</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>1.5</strong> Dynasty phase ends.</p></td>
 </tr>
 </tbody>
 </table>
-</div>
+<div class="paragraph text-center">
+<p><strong><em>Proceed to Draw Phase.</em></strong></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_ii_draw_phase">II. Draw Phase</h3>
-<div class="paragraph">
-<p><strong>2.1</strong> Draw Phase begins.<br>
-<strong>2.2</strong> Honor bid.<br>
-<strong>2.3</strong> Reveal honor dials.<br>
-<strong>2.4</strong> Transfer honor.<br>
-<strong>2.5</strong> Draw cards.<br>
-<strong>ACTION WINDOW</strong><br>
-<strong>2.6</strong> Draw Phase ends.</p>
-</div>
+<table class="tableblock frame-none grid-none stripes-none stretch timing-chart">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>2.1</strong> Draw Phase begins.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>2.2</strong> Honor bid.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>2.3</strong> Reveal honor dials.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>2.4</strong> Transfer honor.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>2.5</strong> Draw cards.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #f7e2d0;"><p class="tableblock"><span class="tc-window">ACTION WINDOW</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>2.6</strong> Draw Phase ends.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph text-center">
 <p><strong><em>Proceed to Conflict Phase.</em></strong></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_iii_conflict_phase">III. Conflict Phase</h3>
-<div class="paragraph">
-<p><strong>3.1</strong> Conflict phase begins.<br>
-<strong>ACTION WINDOW</strong><br>
+<table class="tableblock frame-none grid-none stripes-none stretch timing-chart">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>3.1</strong> Conflict phase begins.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #f7e2d0;"><p class="tableblock"><span class="tc-window">ACTION WINDOW</span><br>
 <strong>NOTE</strong>: After this action window, if no conflict
-opportunities remain, proceed to (<strong>3.4</strong>).<br>
-<strong>3.2</strong> Next player in player order declares a conflict
+opportunities remain, proceed to (<strong>3.4</strong>).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>3.2</strong> Next player in player order declares a conflict
 (go to <strong>Conflict Resolution</strong>), or passes (go to
-(<strong>3.3</strong>)).<br>
-<strong>3.3</strong> Conflict Ends / Conflict was passed. Return to
-the action window following step (<strong>3.1</strong>).<br>
-<strong>3.4</strong> Determine Imperial Favor.<br>
-<strong>3.4.1</strong> Glory count.<br>
-<strong>3.4.2</strong> Claim Imperial Favor.<br>
-<strong>3.5</strong> Conflict phase ends.<br></p>
-</div>
+(<strong>3.3</strong>)).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e2dbf0;"><p class="tableblock"><span class="tc-loop"><strong>3.3</strong> Conflict Ends / Conflict was passed. Return to
+the action window following step (<strong>3.1</strong>).</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>3.4</strong> Determine Imperial Favor.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>3.4.1</strong> Glory count.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>3.4.2</strong> Claim Imperial Favor.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>3.5</strong> Conflict phase ends.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph text-center">
 <p><strong><em>Proceed to Fate Phase.</em></strong></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_conflict_resolution">Conflict Resolution</h3>
-<div class="paragraph">
-<p><strong>3.2</strong> Declare conflict.<br>
-<strong>3.2.1</strong> Declare defenders.<br>
-<strong>3.2.2</strong> CONFLICT ACTION WINDOW<br>
-(Defender has first opportunity)<br>
-<strong>3.2.3</strong> Compare skill values and determine result.<br>
-<strong>3.2.4</strong> Apply unopposed.<br>
-<strong>3.2.5</strong> Break province.<br>
-<strong>3.2.6</strong> Resolve ring effects.<br>
-<strong>3.2.7</strong> Claim ring.<br>
-<strong>3.2.8</strong> Return home. Go to (<strong>3.3</strong>).<br></p>
-</div>
+<table class="tableblock frame-none grid-none stripes-none stretch timing-chart">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>3.2</strong> Declare conflict.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>3.2.1</strong> Declare defenders.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #f7e2d0;"><p class="tableblock"><span class="tc-window">3.2.2 CONFLICT ACTION WINDOW</span><br>
+(Defender has first opportunity)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>3.2.3</strong> Compare skill values and determine result.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>3.2.4</strong> Apply unopposed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>3.2.5</strong> Break province.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>3.2.6</strong> Resolve ring effects.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>3.2.7</strong> Claim ring.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e2dbf0;"><p class="tableblock"><span class="tc-loop"><strong>3.2.8</strong> Return home. Go to (<strong>3.3</strong>).</span></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_iv_fate_phase">IV. Fate Phase</h3>
-<div class="paragraph">
-<p><strong>4.1</strong> Fate phase begins.<br>
-<strong>4.2</strong> Discard characters with no fate.<br>
-<strong>4.3</strong> Remove fate from characters.<br>
-<strong>4.4</strong> Place fate on unclaimed rings (if applicable).<br>
-<strong>ACTION WINDOW</strong><br>
-<strong>4.5</strong> Ready cards.<br>
-<strong>4.6</strong> Discard from provinces.<br>
-<strong>4.7</strong> Return rings (if applicable).<br>
-<strong>4.8</strong> Pass first player token.<br>
-<strong>4.9</strong> Fate phase ends.<br></p>
-</div>
+<table class="tableblock frame-none grid-none stripes-none stretch timing-chart">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>4.1</strong> Fate phase begins.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>4.2</strong> Discard characters with no fate.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>4.3</strong> Remove fate from characters.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>4.4</strong> Place fate on unclaimed rings (if applicable).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #f7e2d0;"><p class="tableblock"><span class="tc-window">ACTION WINDOW</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>4.5</strong> Ready cards.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>4.6</strong> Discard from provinces.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>4.7</strong> Return rings (if applicable).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>4.8</strong> Pass first player token.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #e7e3d9;"><p class="tableblock"><strong>4.9</strong> Fate phase ends.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph text-center">
 <p><strong><em>Proceed to Dynasty Phase.</em></strong></p>
 </div>
@@ -5927,8 +6030,8 @@ the dash to after the dash.)</em></p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 5.0<br>
-Last updated 2025-08-22 20:57:54 UTC
+Version 6.0<br>
+Last updated 2026-09-14 11:22:32 UTC
 </div>
 </div>
 </body>

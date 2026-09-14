@@ -1,0 +1,745 @@
+/* =========================================================================
+   Emerald Legacy — HTML theme for the Rules Reference Guide and the
+   Emerald Edict.
+
+   Everything here is derived from documents the project already owns:
+     · the green, crimson and clan colours come from pdf-theme/themes/*.yml
+     · the parchment and the sakura border rails are taken from
+       docs/images/rrg_background_flat.jpg, the PDF page background, so screen
+       and print share one identity
+
+   Fonts and rail tiles live next to this file and are copied to the build
+   directory by the `copy_theme` Rake task.
+   ========================================================================= */
+
+/* --- Faces ------------------------------------------------------------- */
+
+/* Source Serif 4 — the body face of jigoku.online, so the rules documents and
+   the game client read as one family. Subset to Latin-1, Latin Extended-A and
+   the punctuation these documents use, with the weight axis left variable, so
+   one file covers regular through bold. */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(fonts/sourceserif4.woff2) format('woff2-variations'),
+       url(fonts/sourceserif4.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(fonts/sourceserif4-italic.woff2) format('woff2-variations'),
+       url(fonts/sourceserif4-italic.woff2) format('woff2');
+}
+
+/* The card-symbol font the PDF uses for the [.emeralddb] role. Without it
+   those spans render as a bare ampersand in the browser. */
+@font-face {
+  font-family: 'EmeraldDB';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(fonts/emeralddb.woff2) format('woff2');
+}
+
+/* --- Tokens ------------------------------------------------------------ */
+
+:root {
+  /* Surfaces */
+  --parchment: #f3ebe0;       /* sampled from the printed page background */
+  --parchment-sunk: #e8dcc8;  /* recessed panels: TOC, sidebars, table heads */
+
+  /* Ink */
+  --ink: #1f2119;             /* body text, a near-black with a green cast */
+  --ink-soft: #5c5f52;        /* metadata, captions, muted numbers */
+  --ink-faint: #8d9081;
+
+  /* Accents */
+  --emerald: #2a6419;         /* heading colour of the PDF theme */
+  --emerald-deep: #1b4310;
+  --emerald-wash: #2a641914;
+  --crimson: #b12146;         /* codespan / caret accent of the PDF theme */
+
+  /* Clan colours, verbatim from pdf-theme/themes/el-edict-theme.yml */
+  --crab: #294056;
+  --crane: #4b7ba8;           /* the printed #73A0CA, darkened for AA on parchment */
+  --dragon: #426c44;
+  --lion: #8a7133;            /* the printed #C3AA71, darkened for AA on parchment */
+  --neutral: #494848;
+  --phoenix: #bc510a;
+  --scorpion: #742425;
+  --unicorn: #4e2e6a;
+
+  /* Type. One family throughout, the stack jigoku.online uses. */
+  --font-body: 'Source Serif 4', 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+  --font-mono: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Measure and rhythm. --measure is the text column itself; --column adds the
+     gutters, so the masthead rule, the footer and the column all line up. */
+  --measure: clamp(28rem, 52vw, 44rem);   /* grows with the window */
+  /* The rules text beside a glossary term, where the term column already takes
+     the left edge. Raise the cap to let it run wider still. */
+  --measure-wide: clamp(28rem, 52vw, 54rem);
+  --gutter: clamp(1rem, 4vw, 3rem);
+  --column: calc(var(--measure) + 2 * var(--gutter));
+  --rail: 22px;               /* width of the sakura border rails */
+  --toc-width: 292px;
+}
+
+/* --- Reset ------------------------------------------------------------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  background-color: var(--parchment);
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+/* The page runs the full width of the window, with the rails down both edges
+   exactly as they run down the margins of the printed page. */
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 0 var(--rail);
+  background-color: var(--parchment);
+  background-image:
+    url(assets/rail-left.webp),
+    url(assets/rail-right.webp),
+    /* A short glow at the head of the page. It is sized in pixels rather than
+       as a share of the page: the Rules Reference is over 100,000px tall, and
+       a full-height gradient left the foot of the document a visibly different
+       colour from the head. */
+    linear-gradient(#f8f2ea 0%, var(--parchment) 100%);
+  background-repeat: repeat-y, repeat-y, no-repeat;
+  background-position: left top, right top, center top;
+  background-size: var(--rail) auto, var(--rail) auto, 100% 900px;
+
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;       /* 17px, the body size of emeraldlegacy.org */
+  line-height: 1.68;          /* a serif carries a little more leading */
+  font-feature-settings: 'kern' 1, 'liga' 1;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; height: auto; }
+
+/* --- Links ------------------------------------------------------------- */
+
+a {
+  color: var(--emerald-deep);
+  text-decoration: underline;
+  text-decoration-color: #2a641955;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+  transition: color 0.12s ease, text-decoration-color 0.12s ease;
+}
+a:hover { color: var(--crimson); text-decoration-color: currentColor; }
+
+a:focus-visible,
+:focus-visible {
+  outline: 2px solid var(--emerald);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* --- Masthead ---------------------------------------------------------- */
+
+#header {
+  padding: clamp(2rem, 6vw, 4.5rem) clamp(1rem, 4vw, 3rem) 0;
+  text-align: center;
+}
+
+#header > h1 {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(2.1rem, 5.5vw, 3.5rem);
+  line-height: 1.15;
+  letter-spacing: 0.005em;
+  color: var(--ink);
+}
+
+/* The Emerald Legacy wordmark, held to a sane size — the source sets only a
+   pdfwidth, so the browser would otherwise draw it at 1548px. */
+#header > h1 .image.center img {
+  display: block;
+  width: min(420px, 78%);
+  margin: 0 auto clamp(0.75rem, 2vw, 1.5rem);
+}
+#header > h1 br { display: none; }
+
+/* Both documents print their own "Version n - date" line as the first thing
+   in the body, so the revision block Asciidoctor adds here would say it twice
+   within one screen. */
+#header .details { display: none; }
+
+/* A hairline close to the masthead, the width of the text column. */
+#header::after {
+  content: '';
+  display: block;
+  width: min(var(--column), 100%);
+  height: 1px;
+  margin: clamp(1.75rem, 4vw, 2.75rem) auto 0;
+  background: linear-gradient(90deg, transparent, var(--emerald) 22%, var(--emerald) 78%, transparent);
+  opacity: 0.5;
+}
+
+/* --- Content column ---------------------------------------------------- */
+
+#content {
+  max-width: var(--column);
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 2.75rem) var(--gutter) 4rem;
+}
+
+/* `{empty} +` in the source emits a paragraph holding nothing but a line
+   break; it exists to push the PDF onto a new page. */
+#content .paragraph > p:only-child > br:only-child { display: none; }
+#content .paragraph:has(> p:only-child > br:only-child) { display: none; }
+
+/* --- Headings ---------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 { color: var(--ink); }
+
+/* Chapter level: Glossary, The Emerald Rule, Appendix I … */
+#content h2 {
+  margin: clamp(3rem, 7vw, 4.5rem) 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--emerald);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(1.7rem, 3.4vw, 2.15rem);
+  line-height: 1.25;
+  color: var(--emerald-deep);
+}
+#content .sect1:first-child > h2 { margin-top: 0; }
+
+/* Glossary terms. These are the rhythm of the whole document: 250 entries a
+   reader scans for one word, so they are set flush left in the house green,
+   with a short rule that reads as an index tick. */
+#content h3 {
+  margin: 2.25rem 0 0.6rem;
+  font-size: 1.24rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--emerald);
+  scroll-margin-top: 1.5rem;
+}
+#content h3::before {
+  content: '';
+  display: block;
+  width: 2.25rem;
+  height: 2px;
+  margin-bottom: 0.55rem;
+  background: var(--emerald);
+  opacity: 0.45;
+}
+
+#content h4 {
+  margin: 1.75rem 0 0.5rem;
+  font-size: 1.06rem;
+  font-weight: 600;
+  line-height: 1.35;
+  scroll-margin-top: 1.5rem;
+}
+
+#content h5, #content h6 {
+  margin: 1.25rem 0 0.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+/* Clicking a term in the index marks it, so the eye lands on the right entry
+   instead of hunting the top of the viewport. */
+#content h3:target,
+#content h4:target {
+  box-shadow: -0.75rem 0 0 var(--emerald), inset 0 0 0 100vmax var(--emerald-wash);
+  border-radius: 1px;
+}
+
+/* --- Text blocks ------------------------------------------------------- */
+
+p { margin: 0 0 0.95rem; }
+#content .paragraph > p:last-child { margin-bottom: 0; }
+#content .paragraph { margin-bottom: 0.95rem; }
+
+strong, b { font-weight: 700; }
+
+/* The rules text uses bold to mark every change from FFG's Rules Reference,
+   so bold has to stay quiet enough to read a whole paragraph of it. */
+#content p strong { font-weight: 600; color: #171911; }
+
+em, i { font-style: italic; }
+
+code, .literal, tt {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  color: var(--crimson);
+  background: #b1214610;
+  padding: 0.08em 0.3em;
+  border-radius: 2px;
+}
+
+hr {
+  width: min(12rem, 60%);
+  height: 1px;
+  margin: 2.5rem auto;
+  border: 0;
+  background: linear-gradient(90deg, transparent, var(--ink-faint), transparent);
+}
+
+/* --- Lists ------------------------------------------------------------- */
+
+#content ul, #content ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+#content li { margin-bottom: 0.32rem; }
+#content li > p { margin-bottom: 0.32rem; }
+#content ul ul, #content ol ol, #content ul ol, #content ol ul { margin-top: 0.32rem; margin-bottom: 0.5rem; }
+
+#content ul { list-style: none; padding-left: 1.1rem; }
+#content ul > li { position: relative; }
+#content ul > li::before {
+  content: '';
+  position: absolute;
+  left: -0.95rem;
+  top: 0.62em;
+  width: 5px;
+  height: 5px;
+  background: var(--emerald);
+  opacity: 0.55;
+  transform: rotate(45deg);   /* a small lozenge, the shape of the rail motif */
+}
+/* Second level steps back to a hollow mark. */
+#content ul ul > li::before { background: transparent; box-shadow: inset 0 0 0 1px var(--emerald); opacity: 0.5; }
+
+#content ol { list-style: decimal; }
+#content ol.loweralpha { list-style: lower-alpha; }
+#content ol::marker, #content ol > li::marker { color: var(--emerald); font-weight: 600; }
+
+/* --- Tables ------------------------------------------------------------ */
+
+/* Wide tables get their own scroll container rather than pushing the page. */
+#content table.tableblock {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-collapse: collapse;
+  font-size: 0.98rem;
+}
+#content table.tableblock th,
+#content table.tableblock td {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #2a641933;
+  vertical-align: top;
+  text-align: left;
+}
+#content table.tableblock thead th {
+  background: var(--parchment-sunk);
+  border-bottom: 2px solid var(--emerald);
+  font-weight: 600;
+}
+#content table.tableblock.stripes-all tbody tr:nth-child(even),
+#content table.tableblock.stripes-even tbody tr:nth-child(even) { background: #ffffff55; }
+#content table.tableblock .halign-center { text-align: center; }
+#content table.tableblock .halign-right { text-align: right; }
+#content table.tableblock .valign-middle { vertical-align: middle; }
+#content table.tableblock .valign-bottom { vertical-align: bottom; }
+#content table.tableblock p { margin: 0; }
+
+/* frame=none grid=none is used purely for page layout, not for data. */
+#content table.tableblock.frame-none.grid-none,
+#content table.tableblock.frame-none.grid-none th,
+#content table.tableblock.frame-none.grid-none td { border: 0; background: none; }
+#content table.tableblock.frame-none.grid-none td { padding: 0 1.5rem 0 0; }
+#content table.tableblock.frame-none.grid-cols th,
+#content table.tableblock.frame-none.grid-cols td { border-top: 0; border-bottom: 0; }
+
+/* --- Images, sidebars, captions ---------------------------------------- */
+
+#content .imageblock { margin: 1.75rem 0; text-align: center; }
+#content .imageblock img {
+  border: 1px solid #2a641933;
+  background: #fff;
+  box-shadow: 0 2px 10px #0000001a;
+}
+#content .imageblock .title,
+#content .title {
+  margin-top: 0.6rem;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+#content .image img { vertical-align: middle; }
+
+#content .sidebarblock {
+  margin: 1.75rem 0;
+  padding: 1.1rem 1.35rem;
+  background: var(--parchment-sunk);
+  border-left: 3px solid var(--emerald);
+}
+#content .sidebarblock > .content > .title {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-style: normal;
+  color: var(--emerald-deep);
+}
+
+#content .quoteblock { margin: 1.5rem 0; padding-left: 1.25rem; border-left: 3px solid var(--ink-faint); color: var(--ink-soft); }
+#content .listingblock pre, #content .literalblock pre {
+  margin: 1.25rem 0;
+  padding: 0.9rem 1.1rem;
+  overflow-x: auto;
+  background: var(--parchment-sunk);
+  border: 1px solid #2a641933;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+/* --- Document roles ---------------------------------------------------- */
+
+/* The rules text marks its own revisions with named colours. The PDF theme
+   never defined them, so until now they were invisible in both outputs. */
+.font-color\:.green, .green { color: var(--emerald); font-weight: 600; }
+.font-color\:.gray, .gray { color: #6a6a6a; }
+.font-color\:.purple, .purple { color: var(--unicorn); }
+
+/* Card names in the clarifications appendix. */
+.font-color\:.blue, .blue { color: #2f5d8c; font-weight: 600; }
+.underline { text-decoration: underline; text-decoration-color: #2f5d8c66; text-underline-offset: 0.15em; }
+
+/* Card symbols set in the EmeraldDB icon font. */
+.emeralddb, .emeralddbsm {
+  font-family: 'EmeraldDB';
+  font-style: normal;
+  line-height: 1;
+  vertical-align: -0.06em;
+  color: var(--ink);
+}
+.emeralddb { font-size: 1.25em; }
+.emeralddbsm { font-size: 0.95em; }
+
+.big { font-size: 1.15em; }
+.small { font-size: 0.85em; }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* The version line under the opening heading. */
+#content .metadata {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+/* --- Table of contents ------------------------------------------------- */
+
+/* On a wide screen the index is pinned to the right edge of the window, so a
+   term is always one click away while reading. Below that it falls back to a
+   scrollable panel at the top of the document. */
+#toc {
+  margin: 2.5rem auto 0;
+  padding: 1.1rem 1.25rem;
+  max-width: var(--column);
+  max-height: 60vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--parchment-sunk);
+  border: 1px solid #2a641933;
+  text-align: left;
+}
+
+#toctitle {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--emerald-deep);
+}
+
+#toc ul { list-style: none; margin: 0; padding: 0; }
+#toc ul ul { padding-left: 0.85rem; }
+#toc li { margin: 0; line-height: 1.35; }
+#toc a {
+  display: block;
+  padding: 0.18rem 0.3rem;
+  color: var(--ink);
+  text-decoration: none;
+  border-radius: 2px;
+}
+#toc > ul.sectlevel1 > li > a { font-weight: 600; color: var(--emerald-deep); }
+#toc ul ul a { font-size: 0.94rem; color: var(--ink-soft); }
+#toc a:hover { background: var(--emerald-wash); color: var(--emerald-deep); }
+
+@media (min-width: 1120px) {
+  /* The index is taken out of the flow, so the page reserves the room for it
+     and the reading column stays centred in what is left. */
+  body.toc2 { padding-right: calc(var(--rail) + var(--toc-width)); }
+
+  body.toc2 #toc {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: var(--rail);
+    z-index: 10;
+    width: var(--toc-width);
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 1.6rem 1rem 2rem 1.25rem;
+    border: 0;
+    border-left: 1px solid #2a641933;
+    background: linear-gradient(90deg, #0000000a, transparent 2rem), var(--parchment-sunk);
+  }
+
+}
+
+/* --- Phase Sequence Timing Chart ---------------------------------------- */
+
+/* The prose above the chart tells the reader that framework steps sit in grey
+   boxes, action windows in orange ones and the windows that send the game back
+   to an earlier step in purple. The cell fills come from the document itself
+   (cellbgcolor, which both backends emit), so this only has to shape the
+   boxes and style the labels inside them. */
+#content table.timing-chart {
+  margin: 0.75rem 0 1.25rem;
+  border-collapse: separate;
+  border-spacing: 0 3px;
+}
+#content table.timing-chart td {
+  padding: 0.5rem 0.75rem;
+  border: 0;
+  border-radius: 3px;
+  line-height: 1.45;
+}
+#content table.timing-chart td p { margin: 0; }
+
+/* The step number carries the reference a reader is scanning for. */
+#content table.timing-chart td > p > strong:first-child { color: var(--emerald-deep); }
+
+.tc-window {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #a4460b;
+}
+/* The lozenge FFG's chart uses to mark an action window. */
+.tc-window::before {
+  content: '◇';
+  margin-right: 0.4em;
+  font-weight: 400;
+}
+.tc-loop { color: var(--unicorn); }
+.tc-loop strong { color: var(--unicorn) !important; }
+
+/* "Proceed to Draw Phase." between one chart and the next. */
+#content table.timing-chart + .text-center {
+  margin: 0 0 2rem;
+  color: var(--ink-soft);
+}
+
+/* --- Wide screens: the glossary as a two-column index -------------------- */
+
+/* The printed RRG sets the whole page in two columns, which a page of fixed
+   height can do and a scrolling one cannot: measured on this document, a
+   two-column Glossary is a single balanced block 41,000px tall, so you would
+   read 41,000px down the left column and scroll back up for the right one.
+   The same width is put to better use by giving each glossary entry its own
+   two-column row — the term on the left, its rule text on the right. The terms
+   then form one continuous left edge to run your eye down, and the rules text
+   keeps a short line. */
+@media (min-width: 1440px) {
+  body.toc2 #content {
+    max-width: none;
+    padding-left: clamp(2rem, 5vw, 5rem);
+  }
+
+  body.toc2 #content .sect2 {
+    display: grid;
+    grid-template-columns: 13rem minmax(0, var(--measure-wide));
+    column-gap: 2.75rem;
+    align-items: start;
+    /* The rule that sits above each term in the stacked layout runs the whole
+       width of the row here, so it reads as one line tying a term to its
+       text rather than as a mark on the term alone. */
+    margin-top: 2.25rem;
+    padding-top: 0.6rem;
+    border-top: 2px solid var(--emerald);
+    border-image: linear-gradient(90deg, var(--emerald) 0 78%, transparent) 1;
+  }
+  body.toc2 #content .sect1 > .sectionbody > .sect2:first-of-type { margin-top: 1.5rem; }
+  body.toc2 #content .sect2 > h3 {
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 0;
+    padding-top: 0.1rem;
+  }
+  body.toc2 #content .sect2 > h3::before { display: none; }
+  body.toc2 #content .sect2 > :not(h3) { grid-column: 2; }
+
+  /* A longer line needs more leading to find its way back to the next one. */
+  body.toc2 #content .sect2 > :not(h3) { line-height: 1.75; }
+
+  /* The entry as a whole is what the index links to now. */
+  body.toc2 #content .sect2 { scroll-margin-top: 1.5rem; }
+  body.toc2 #content .sect2:has(> h3:target) {
+    box-shadow: -1rem 0 0 var(--emerald), inset 0 0 0 100vmax var(--emerald-wash);
+    border-radius: 1px;
+  }
+  body.toc2 #content .sect2:has(> h3:target) > h3 { box-shadow: none; }
+  body.toc2 #content h3:target { box-shadow: none; }
+
+  /* Chapter heads and the prose that introduces them stay out of the grid. */
+  body.toc2 #content h2,
+  body.toc2 #content .sect1 > .sectionbody > .paragraph,
+  body.toc2 #content .sect1 > .sectionbody > .ulist,
+  body.toc2 #content .sect1 > .sectionbody > .olist,
+  body.toc2 #content .sect1 > .sectionbody > .imageblock,
+  body.toc2 #content .sect1 > .sectionbody > .sidebarblock,
+  body.toc2 #content .sect1 > .sectionbody > hr {
+    margin-left: calc(13rem + 2.75rem);
+    max-width: var(--measure);
+  }
+  /* Charts and wide tables may use the whole width. */
+  body.toc2 #content .sect1 > .sectionbody > .imageblock { max-width: none; }
+}
+
+/* --- The Emerald Edict ------------------------------------------------- */
+
+/* The banned and restricted lists are organised by clan, so clan colour is
+   the structure of the page rather than decoration: each block carries its
+   clan's rule, taken from the printed edition's theme. */
+#content .sect2:has(> h3 .crab)     { --clan: var(--crab); }
+#content .sect2:has(> h3 .crane)    { --clan: var(--crane); }
+#content .sect2:has(> h3 .dragon)   { --clan: var(--dragon); }
+#content .sect2:has(> h3 .lion)     { --clan: var(--lion); }
+#content .sect2:has(> h3 .neutral)  { --clan: var(--neutral); }
+#content .sect2:has(> h3 .phoenix)  { --clan: var(--phoenix); }
+#content .sect2:has(> h3 .scorpion) { --clan: var(--scorpion); }
+#content .sect2:has(> h3 .unicorn)  { --clan: var(--unicorn); }
+
+#content .sect2:has(> h3 > .image) {
+  margin-bottom: 1.75rem;
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--clan, var(--ink-faint));
+}
+#content .sect2:has(> h3 > .image) > h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  color: var(--clan, var(--emerald));
+}
+#content .sect2:has(> h3 > .image) > h3::before { display: none; }
+#content .sect2:has(> h3 > .image) > h3 .image img { width: 22px; height: auto; }
+
+/* Colour the clan name even where :has() is unavailable. */
+.crab { color: var(--crab); }
+.crane { color: var(--crane); }
+.dragon { color: var(--dragon); }
+.lion { color: var(--lion); }
+.neutral { color: var(--neutral); }
+.phoenix { color: var(--phoenix); }
+.scorpion { color: var(--scorpion); }
+.unicorn { color: var(--unicorn); }
+
+/* With the page running the full width of the window and the lists now one
+   continuous run per section, the clan blocks flow into as many columns as
+   fit. The prose that introduces a section stays across the full width. */
+body:not(.toc2) #content { max-width: 100%; }
+
+#content .sectionbody:has(> .sect2 > h3 > .image) {
+  columns: 17rem;
+  column-gap: 2.75rem;
+}
+#content .sectionbody:has(> .sect2 > h3 > .image) > .paragraph,
+#content .sectionbody:has(> .sect2 > h3 > .image) > .ulist {
+  column-span: all;
+}
+#content .sect2:has(> h3 > .image) {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+/* A column must not open on a heading's underhang. */
+#content .sectionbody:has(> .sect2 > h3 > .image) > .sect2:first-child > h3 { margin-top: 0; }
+
+/* Card entries. A ban list is read by running down it for one card name, so
+   the rows are tight and the whole row responds to the pointer. */
+#content .sect2:has(> h3 > .image) ul { padding-left: 0; }
+#content .sect2:has(> h3 > .image) li { margin: 0; }
+#content .sect2:has(> h3 > .image) li::before { display: none; }
+#content .sect2:has(> h3 > .image) li a {
+  display: block;
+  padding: 0.18rem 0.4rem;
+  color: var(--ink);
+  text-decoration: none;
+  border-radius: 2px;
+}
+/* The row tints to its clan on hover; the card name itself stays in ink,
+   where the lighter clan colours would not hold their contrast at text size. */
+#content .sect2:has(> h3 > .image) li a:hover {
+  background: color-mix(in srgb, var(--clan, var(--emerald)) 14%, transparent);
+  box-shadow: inset 2px 0 0 var(--clan, var(--emerald));
+  color: var(--ink);
+}
+
+/* Changes since the previous edict. */
+.new { color: var(--emerald); font-weight: 700; }
+
+/* --- Footer ------------------------------------------------------------ */
+
+#footer {
+  max-width: var(--column);
+  margin: 0 auto;
+  padding: 1.5rem var(--gutter) 3rem;
+  border-top: 1px solid #2a641933;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* --- Narrow screens ---------------------------------------------------- */
+
+@media (max-width: 700px) {
+  :root { --rail: 10px; --measure: 100%; --gutter: 1rem; }
+
+  #content { max-width: 100%; }
+
+  /* The Edict lays its clan lists out in a two-column Asciidoc table; on a
+     phone those cells stack instead of being squeezed. */
+  #content table.tableblock.frame-none.grid-none,
+  #content table.tableblock.frame-none.grid-none tbody,
+  #content table.tableblock.frame-none.grid-none tr,
+  #content table.tableblock.frame-none.grid-none td { display: block; width: 100%; }
+  #content table.tableblock.frame-none.grid-none td { padding: 0 0 1.5rem; }
+
+  /* Data tables keep their shape and scroll sideways on their own. */
+  #content table.tableblock:not(.frame-none) { display: block; overflow-x: auto; }
+}
+
+/* --- Print ------------------------------------------------------------- */
+
+@media print {
+  html { background: #fff; }
+  body {
+    max-width: none;
+    padding: 0;
+    background: #fff;
+    box-shadow: none;
+    font-size: 10.5pt;
+  }
+  #toc { display: none; }
+  body.toc2 #content, body.toc2 #header, body.toc2 #footer { margin-right: 0; padding-right: 0; }
+  #content { max-width: none; }
+  #content h2 { break-after: avoid; }
+  #content h3, #content h4 { break-after: avoid; break-inside: avoid; }
+  #content .imageblock, #content table { break-inside: avoid; }
+  a { color: var(--ink); text-decoration: none; }
+}
