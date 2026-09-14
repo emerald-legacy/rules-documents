@@ -3,8 +3,8 @@
 :imagesdir: images
 :chapter-label:
 :page-background-image: image:rrg_background_flat.jpg[fit=fill, pdfwidth=100%]
-:revnumber: 5.0
-:revdate: May 10, 2025
+:revnumber: 6.0
+:revdate: September 8, 2026
 
 = image:el_logo.png[pdfwidth=70%,role=center]pass:q[<br>]Rules Reference
 :toc: right
@@ -453,6 +453,12 @@ Eminent is a keyword ability that can be found on province cards. A province wit
 === Enters Play
 The phrase "enters play" refers to any time a card makes a transition from an out-of-play area or state into play. Playing a card and putting a card into play by using a card ability are two means by which a card may enter play.
 
+=== Ephemeral
+_Ephemeral_ is a keyword ability found on event and attachment cards.
+On events, it means that after the card has been played, it is removed from the game.
+On attachments, it means that when the attachment leaves play, it is removed from the game.
+In either case, effects that would normally put the card in another out-of-play area cannot prevent the card being removed from the game.
+
 === Event Cards
 Event cards represent tactical acts and maneuvers, court intrigues, spells, supernatural occurrences, and other unexpected developments that might occur during a game.
 
@@ -654,6 +660,11 @@ Interrupts and reactions may be used throughout this process as normal, should t
 
 *Related*: <<Ability>>, <<Cost>>, <<Effects>>, <<Resolve an Ability>>, <<Target>>
 
+=== Injure
+When a game effect instructs a player to injure a character it means:
+
+"If the character has no fate on it, discard it. Otherwise, remove 1 fate from it."
+
 === In Player Order
 If the players are instructed to perform a sequence "in player order," the first player performs their part of the sequence first, followed by the player to the first player's left and continuing in clockwise order.
 - If a sequence performed in player order does not conclude after each player has performed their aspect of the sequence once, the sequence of opportunities continues to alternate from player to player in clockwise order until it is complete.
@@ -828,6 +839,10 @@ There are times in the game at which a player has an option to perform an act (s
 - The first player to pass the opportunity to use an action or play a card during the dynasty phase forfeits the opportunity to do so for the remainder of the phase.
 - Other game sequences in which players have the option to pass continue until both players pass consecutively. If the first player passes, and the second player does not, the opportunity returns to the first player in the sequence. The sequence only ends when both players have passed in succession. (In other words, passing in such a sequence does not prevent a player from re-entering the sequence should the opponent not also pass in succession.)
 - When passing an opportunity to declare a conflict, a player is not required to specify which type of conflict he or she is passing.
+
+=== Peaceful
+_Peaceful_ is a keyword ability found on event and attachment cards.
+It means that this card cannot be played during a conflict.
 
 === Personal Honor, Personal Dishonor
 Personal honor is a means of tracking the honored or dishonored status of individual character cards. Each character exists in one of three states:
@@ -1521,6 +1536,10 @@ post-to aspect of that effect resolves simultaneously with all
 other effects of that card ability.
 - If the pre-to aspect of an effect does not successfully resolve in
 full, the post-to aspect's resolution is canceled.
+
+=== Thriving
+_Thriving_ is a keyword ability found on Dynasty cards.
+It means when the fate phase ends, if this is the only card in this province, fill this province with 1 facedown dynasty card.
 
 === Token Pool, General Token Pool
 
