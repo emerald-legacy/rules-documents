@@ -26,6 +26,10 @@ You may only include one restricted card in your deck.
 [.text-center]
 Changes to the previous version are marked in [.new]#bold and green.#
 
+== Rally Keyword
+A maximum of five copies of cards with the Rally keyword can be included in your deck.
+These count towards maximum, but not minimum deck size.
+
 
 == Banned Cards
 === image:mons/neutral.svg[width=20] [.neutral]#Neutral#
