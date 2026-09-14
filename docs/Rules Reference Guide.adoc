@@ -363,7 +363,7 @@ that player may spend during deckbuilding.
 - A player cannot include more than 1 card (by card title) from the Restricted List in their decks and set of provinces. Up to a full legal playset (usually 3 copies) of that card may be included in the appropriate deck or provinces.
 - A player's set of provinces must include exactly 5 provinces. For each element, that player must choose one province associated with that element, such that all five elements are represented among their set of provinces. (Each province has a ring symbol in the lower right corner of the card to indicate its association.) Each of these provinces must be in-clan or be neutral.
 ** No more than 1 copy of each province, by title, may be included in a player's set of provinces.
-- Any additional deckbuilding restrictions contained in the separate Imperial Law document, based on the format being played, must be followed.
+- Any additional deckbuilding restrictions contained in the separate link:{edict-url}[Emerald Edict] document, based on the format being played, must be followed.
 - The skirmish format follows different deckbuilding rules than each other format. When building decks for the skirmish format, use the following rules instead:
 ** Do not include stronghold, role, or province cards.
 ** A player's dynasty deck must contain a minimum of 30 cards and a maximum of 40 cards. Each of these cards must be in-clan or neutral.
