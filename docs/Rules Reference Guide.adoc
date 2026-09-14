@@ -241,7 +241,7 @@ Composure is a variable keyword ability. A card with this keyword gains an addit
 === Conflict
 During the conflict phase, each player has two opportunities to declare a conflict against an opponent. For the rules on how to resolve conflicts, see <<Framework Details>>.
 
-=== Conflict (Conflict Action), Triggered Conflict Ability
+=== Conflict Action, Triggered Conflict Ability
 
 If a triggered ability is preceded by the modifier "Conflict", that ability can only be triggered during a conflict. It functions as a shorthand for the following triggering conditions:
 
