@@ -1915,78 +1915,167 @@ the resolution of that step, interrupting the process of that step.
 [.column]
 <<<
 
+=== I. Dynasty Phase
+[.timing-chart]
+[cols="1", frame=none, grid=none, stripes=none]
+|===
+|{set:cellbgcolor:#e7e3d9}
+*1.1* Dynasty phase begins.
 
-****
-[cols="12a", stripes=all, frame=none]
+|
+*1.2* Reveal facedown dynasty cards.
+
+|
+*1.3* Collect fate.
+
+|{set:cellbgcolor:#f7e2d0}
+[.tc-window]#1.4 SPECIAL ACTION WINDOW# +
+Players alternate playing cards from provinces/hand and/or triggering Action abilities.
+
+|{set:cellbgcolor:#e7e3d9}
+*1.5* Dynasty phase ends.
 |===
-|=== I. Dynasty Phase +
-|*1.1* Dynasty phase begins. +
-|*1.2* Reveal facedown dynasty cards. +
-|*1.3* Collect fate. +
-{set:cellbgcolor:red}|*1.4 SPECIAL ACTION WINDOW* +
-Players alternate playing cards from provinces/hand and/or triggering Action abilities. +
-|*1.5* Dynasty phase ends.
-|[.text-center]
+
+[.text-center]
 *_Proceed to Draw Phase._*
-|===
-****
 
 === II. Draw Phase
-*2.1* Draw Phase begins. +
-*2.2* Honor bid. +
-*2.3* Reveal honor dials. +
-*2.4* Transfer honor. +
-*2.5* Draw cards. +
-*ACTION WINDOW* +
+[.timing-chart]
+[cols="1", frame=none, grid=none, stripes=none]
+|===
+|{set:cellbgcolor:#e7e3d9}
+*2.1* Draw Phase begins.
+
+|
+*2.2* Honor bid.
+
+|
+*2.3* Reveal honor dials.
+
+|
+*2.4* Transfer honor.
+
+|
+*2.5* Draw cards.
+
+|{set:cellbgcolor:#f7e2d0}
+[.tc-window]#ACTION WINDOW#
+
+|{set:cellbgcolor:#e7e3d9}
 *2.6* Draw Phase ends.
+|===
 
 [.text-center]
 *_Proceed to Conflict Phase._*
 
 === III. Conflict Phase
-*3.1* Conflict phase begins. +
-*ACTION WINDOW* +
+[.timing-chart]
+[cols="1", frame=none, grid=none, stripes=none]
+|===
+|{set:cellbgcolor:#e7e3d9}
+*3.1* Conflict phase begins.
+
+|{set:cellbgcolor:#f7e2d0}
+[.tc-window]#ACTION WINDOW# +
 *NOTE*: After this action window, if no conflict
-opportunities remain, proceed to (*3.4*). +
+opportunities remain, proceed to (*3.4*).
+
+|{set:cellbgcolor:#e7e3d9}
 *3.2* Next player in player order declares a conflict
 (go to *Conflict Resolution*), or passes (go to
-(*3.3*)). +
-*3.3* Conflict Ends / Conflict was passed. Return to
-the action window following step (*3.1*). +
-*3.4* Determine Imperial Favor. +
-*3.4.1* Glory count. +
-*3.4.2* Claim Imperial Favor. +
-*3.5* Conflict phase ends. +
+(*3.3*)).
+
+|{set:cellbgcolor:#e2dbf0}
+[.tc-loop]#*3.3* Conflict Ends / Conflict was passed. Return to
+the action window following step (*3.1*).#
+
+|{set:cellbgcolor:#e7e3d9}
+*3.4* Determine Imperial Favor.
+
+|
+*3.4.1* Glory count.
+
+|
+*3.4.2* Claim Imperial Favor.
+
+|
+*3.5* Conflict phase ends.
+|===
 
 [.text-center]
 *_Proceed to Fate Phase._*
 
 === Conflict Resolution
-*3.2* Declare conflict. +
-*3.2.1* Declare defenders. +
-*3.2.2* CONFLICT ACTION WINDOW +
-(Defender has first opportunity) +
-*3.2.3* Compare skill values and determine result. +
-*3.2.4* Apply unopposed. +
-*3.2.5* Break province. +
-*3.2.6* Resolve ring effects. +
-*3.2.7* Claim ring. +
-*3.2.8* Return home. Go to (*3.3*). +
+[.timing-chart]
+[cols="1", frame=none, grid=none, stripes=none]
+|===
+|{set:cellbgcolor:#e7e3d9}
+*3.2* Declare conflict.
+
+|
+*3.2.1* Declare defenders.
+
+|{set:cellbgcolor:#f7e2d0}
+[.tc-window]#3.2.2 CONFLICT ACTION WINDOW# +
+(Defender has first opportunity)
+
+|{set:cellbgcolor:#e7e3d9}
+*3.2.3* Compare skill values and determine result.
+
+|
+*3.2.4* Apply unopposed.
+
+|
+*3.2.5* Break province.
+
+|
+*3.2.6* Resolve ring effects.
+
+|
+*3.2.7* Claim ring.
+
+|{set:cellbgcolor:#e2dbf0}
+[.tc-loop]#*3.2.8* Return home. Go to (*3.3*).#
+|===
 
 === IV. Fate Phase
-*4.1* Fate phase begins. +
-*4.2* Discard characters with no fate. +
-*4.3* Remove fate from characters. +
-*4.4* Place fate on unclaimed rings (if applicable). +
-*ACTION WINDOW* +
-*4.5* Ready cards. +
-*4.6* Discard from provinces. +
-*4.7* Return rings (if applicable). +
-*4.8* Pass first player token. +
-*4.9* Fate phase ends. +
+[.timing-chart]
+[cols="1", frame=none, grid=none, stripes=none]
+|===
+|{set:cellbgcolor:#e7e3d9}
+*4.1* Fate phase begins.
+
+|
+*4.2* Discard characters with no fate.
+
+|
+*4.3* Remove fate from characters.
+
+|
+*4.4* Place fate on unclaimed rings (if applicable).
+
+|{set:cellbgcolor:#f7e2d0}
+[.tc-window]#ACTION WINDOW#
+
+|{set:cellbgcolor:#e7e3d9}
+*4.5* Ready cards.
+
+|
+*4.6* Discard from provinces.
+
+|
+*4.7* Return rings (if applicable).
+
+|
+*4.8* Pass first player token.
+
+|
+*4.9* Fate phase ends.
+|===
 
 [.text-center]
 *_Proceed to Dynasty Phase._*
+
 
 === Framework Details
 
