@@ -142,7 +142,8 @@ All the cards listed here rotated out of the valid card pool and are not allowed
 Emerald Legacy tournaments. Unlike Banned cards, which might be unbanned at some point,
 rotated cards will never return to the valid card pool.
 
-Rotated are all cards of the https://www.emeralddb.org/cards?cycle=core[original FFG Core Set] as well as the https://www.emeralddb.org/cards?cycle=imperial[complete Imperial Cycle] and the https://www.emeralddb.org/cards?cycle=elemental[complete Elemental Cycle].
+Rotated are all cards of the https://www.emeralddb.org/cards?cycle=core[original FFG Core Set] as well as the https://www.emeralddb.org/cards?cycle=imperial[complete Imperial Cycle], the https://www.emeralddb.org/cards?cycle=elemental[complete Elemental Cycle],
+and the https://www.emeralddb.org/cards?cycle=inheritance[complete Inheritance Cycle].
 In addition, the following cards are rotated because they were replaced with slightly different cards in https://www.emeralddb.org/cards?pack=restoration-of-balance[Restoration of Balance].
 
 [cols="1a,1a",stripes=none,frame=none,grid=none]
