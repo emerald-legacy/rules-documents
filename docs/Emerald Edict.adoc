@@ -32,6 +32,12 @@ These count towards maximum, but not minimum deck size.
 
 
 == Banned Cards
+// One cell per clan: Prawn keeps a table cell whole, so a clan never
+// splits across a column break. Nothing here is balanced by hand.
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/neutral.svg[width=20] [.neutral]#Neutral#
 * https://www.emeralddb.org/card/accursed-summoning[Accursed Summoning]
 * https://www.emeralddb.org/card/audience-chamber[Audience Chamber]
@@ -45,84 +51,150 @@ These count towards maximum, but not minimum deck size.
 * https://www.emeralddb.org/card/slovenly-scavenger[Slovenly Scavenger]
 * https://www.emeralddb.org/card/unveiled-corruption[Unveiled Corruption]
 * https://www.emeralddb.org/card/way-of-the-warrior[Way of the Warrior]
+|===
 
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/crane.svg[width=20] [.crane]#Crane#
 * https://www.emeralddb.org/card/doji-diplomat[Dōji Diplomat]
 * https://www.emeralddb.org/card/festival-for-the-fortunes[Festival for the Fortunes]
 * https://www.emeralddb.org/card/fu-sui-temple[Fū Sui Temple]
+|===
 
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/dragon.svg[width=20] [.dragon]#Dragon#
 * https://www.emeralddb.org/card/belief-in-the-little-teacher[Belief in the Little Teacher]
 * https://www.emeralddb.org/card/centered-breath[Centered Breath]
 * https://www.emeralddb.org/card/shoshi-ni-kie[Shoshi ni Kie]
 * https://www.emeralddb.org/card/phoenix-tattoo[Phoenix Tattoo]
+|===
 
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/lion.svg[width=20] [.lion]#Lion#
 * https://www.emeralddb.org/card/called-to-war[Called to War]
 * https://www.emeralddb.org/card/glorious-victory[Glorious Victory]
 * https://www.emeralddb.org/card/lion-s-pride-paragon[Lion’s Pride Paragon]
 * https://www.emeralddb.org/card/ardent-omoidasu[Ardent Omoidasu]
+|===
 
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/phoenix.svg[width=20] [.phoenix]#Phoenix#
 * https://www.emeralddb.org/card/calling-the-storm[Calling the Storm]
 * https://www.emeralddb.org/card/dance-of-chikusho-do[Dance of Chikushō-dō]
 * https://www.emeralddb.org/card/isawa-tadaka[Isawa Tadaka 1]
 * https://www.emeralddb.org/card/isawa-tsuke[Isawa Tsuke 1]
+|===
 
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/scorpion.svg[width=20] [.scorpion]#Scorpion#
 * https://www.emeralddb.org/card/yogo-junzo[Yogo Junzo]
+|===
 
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/unicorn.svg[width=20] [.unicorn]#Unicorn#
 * https://www.emeralddb.org/card/golden-plains[Golden Plains]
 * https://www.emeralddb.org/card/iuchi-rimei[Iuchi Rimei]
 * https://www.emeralddb.org/card/scouted-terrain[Scouted Terrain]
 * https://www.emeralddb.org/card/utaku-tetsuko[Utaku Tetsuko]
-
-<<<
+|===
 
 == Restricted Cards
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/neutral.svg[width=20] [.neutral]#Neutral#
 * https://www.emeralddb.org/card/contested-countryside[Contested Countryside]
 * https://www.emeralddb.org/card/proving-ground[Proving Ground]
 * https://www.emeralddb.org/card/those-who-serve[Those Who Serve]
+|===
 
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/crab.svg[width=20] [.crab]#Crab#
 * https://www.emeralddb.org/card/butcher-of-the-fallen[Butcher of the Fallen]
 * https://www.emeralddb.org/card/levy-2[Levy]
 * https://www.emeralddb.org/card/smuggling-deal[Smuggling Deal]
+|===
 
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/crane.svg[width=20] [.crane]#Crane#
 * https://www.emeralddb.org/card/kakita-toshimoko[Kakita Toshimoko]
 * https://www.emeralddb.org/card/preeminent-decree[Preeminent Decree]
 * https://www.emeralddb.org/card/tsuma[Tsuma]
+|===
 
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/dragon.svg[width=20] [.dragon]#Dragon#
 * https://www.emeralddb.org/card/adorned-temple[Adorned Temple]
 * https://www.emeralddb.org/card/foothills-keep[Foothills Keep]
 * https://www.emeralddb.org/card/revered-bonsho[Revered Bonsho]
+|===
 
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/lion.svg[width=20] [.lion]#Lion#
 * https://www.emeralddb.org/card/feeding-an-army[Feeding an Army]
 * https://www.emeralddb.org/card/hayaken-no-shiro[Hayaken no Shiro]
 * https://www.emeralddb.org/card/matsu-sakura[Matsu Sakura]
+|===
 
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/phoenix.svg[width=20] [.phoenix]#Phoenix#
 * https://www.emeralddb.org/card/asako-kousuke[Asako Kousuke]
 * https://www.emeralddb.org/card/isawa-tsuke-2[Isawa Tsuke 2]
 * https://www.emeralddb.org/card/secluded-shrine[Secluded Shrine]
+|===
 
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/scorpion.svg[width=20] [.scorpion]#Scorpion#
 * https://www.emeralddb.org/card/dispatch-to-nowhere[Dispatch to Nowhere]
 * https://www.emeralddb.org/card/display-of-loyalty[Display of Loyalty]
 * https://www.emeralddb.org/card/sinister-peacekeeper[Sinister Peacekeeper]
+|===
 
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/unicorn.svg[width=20] [.unicorn]#Unicorn#
 * https://www.emeralddb.org/card/fields-of-rolling-thunder[Fields of Rolling Thunder]
 * https://www.emeralddb.org/card/ride-at-dawn[Ride at Dawn]
 * https://www.emeralddb.org/card/shinjo-yasamura[Shinjo Yasamura]
-
-
-<<<
+|===
 
 == Rotated Cards
 [.text-center]
@@ -134,45 +206,85 @@ Rotated are all cards of the https://www.emeralddb.org/cards?cycle=core[original
 and the https://www.emeralddb.org/cards?cycle=inheritance[complete Inheritance Cycle].
 In addition, the following cards are rotated because they were replaced with slightly different cards in https://www.emeralddb.org/cards?pack=restoration-of-balance[Restoration of Balance].
 
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/neutral.svg[width=20] [.neutral]#Neutral#
 * https://www.emeralddb.org/card/awakened-tsukumogami[Awakened Tsukumogami]
 * https://www.emeralddb.org/card/insightful-gatekeeper[Insightful Gatekeeper]
 * https://www.emeralddb.org/card/mantis-seafarer[Mantis Seafarer]
+|===
 
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/crab.svg[width=20] [.crab]#Crab#
 * https://www.emeralddb.org/card/common-cause[Common Cause]
 * https://www.emeralddb.org/card/favourable-dealbroker[Favourable Dealbroker]
 * https://www.emeralddb.org/card/kuni-wasteland[Kuni Wasteland]
+|===
 
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/crane.svg[width=20] [.crane]#Crane#
 * https://www.emeralddb.org/card/daidoji-uji-2[Daidoji Uji 2]
 * https://www.emeralddb.org/card/kakita-s-final-stance[Kakita's Final Stance]
 * https://www.emeralddb.org/card/the-wealth-of-the-crane[The Wealth of the Crane]
+|===
 
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/dragon.svg[width=20] [.dragon]#Dragon#
 * https://www.emeralddb.org/card/ki-alignment[Ki Alignment]
 * https://www.emeralddb.org/card/mirumoto-daisho[Mirumoto Daishō]
 * https://www.emeralddb.org/card/swell-of-seafoam[Swell of Seafoam]
 * https://www.emeralddb.org/card/unquestioned-heritage[Unquestioned Heritage]
+|===
 
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/lion.svg[width=20] [.lion]#Lion#
 * https://www.emeralddb.org/card/exposed-courtyard[Exposed Courtyard]
 * https://www.emeralddb.org/card/ikoma-tsanuri[Ikoma Tsanuri]
 * https://www.emeralddb.org/card/in-service-to-my-lord[In Service to My Lord]
 * https://www.emeralddb.org/card/logistics[Logistics]
+|===
 
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/phoenix.svg[width=20] [.phoenix]#Phoenix#
 * https://www.emeralddb.org/card/embrace-the-void[Embrace the Void]
 * https://www.emeralddb.org/card/jurojin-s-curse[Jurōjin's Curse]
 * https://www.emeralddb.org/card/spell-scroll[Spell Scroll]
+|===
 
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/scorpion.svg[width=20] [.scorpion]#Scorpion#
 * https://www.emeralddb.org/card/bayushi-shoju-2[Bayushi Shoju 2]
 * https://www.emeralddb.org/card/duty[Duty]
 * https://www.emeralddb.org/card/governor-s-spy[Governor's Spy]
 * https://www.emeralddb.org/card/sake-house-confidant[Sake House Confidant]
+|===
 
+[.clan-block]
+[cols="1a", frame=none, grid=none, stripes=none]
+|===
+|
 === image:mons/unicorn.svg[width=20] [.unicorn]#Unicorn#
 * https://www.emeralddb.org/card/command-by-name[Command by Name]
 * https://www.emeralddb.org/card/daikyu[Daikyū]
 * https://www.emeralddb.org/card/khanbulak-benefactor[Khanbulak Benefactor]
+|===

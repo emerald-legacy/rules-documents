@@ -54,6 +54,11 @@ base:
   border_width: 0.5
   margin_bottom: 12.5
 role:
+  # The wrapper table around each clan exists only to keep the block whole
+  # across a column break, so it must not add any spacing of its own.
+  clan-block:
+    margin_top: 0
+    margin_bottom: 0
   big:
     font-size: 12
   small:
