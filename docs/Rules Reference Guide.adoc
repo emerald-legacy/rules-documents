@@ -2629,7 +2629,7 @@ Definitions of each element can be found in the glossary.
 === Card Anatomy Key
 1. *Title*: The name of the card.
 2. *Cost*: The fate cost to play the card.
-3. *card type*: Indicates how a card is played or used during the
+3. *Card Type*: Indicates how a card is played or used during the
 course of the game.
 4. *Clan Symbol*: The card's clan affiliation.
 5. *Military Skill*: The character's military skill value.
