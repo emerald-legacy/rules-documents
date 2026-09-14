@@ -36,7 +36,7 @@ Changes to the previous version are marked in [.new]#bold and green.#
 * https://www.emeralddb.org/card/enlightenment[Enlightenment]
 * https://www.emeralddb.org/card/lost-papers[Lost Papers]
 * https://www.emeralddb.org/card/lurking-affliction[Lurking Affliction]
-* https://www.emeralddb.org/card/oni-tyrant[Oni Tyrant, role="new"]
+* https://www.emeralddb.org/card/oni-tyrant[Oni Tyrant]
 * https://www.emeralddb.org/card/reserve-tents[Reserve Tents]
 * https://www.emeralddb.org/card/secluded-shrine[Secluded Shrine]
 * https://www.emeralddb.org/card/slovenly-scavenger[Slovenly Scavenger]
@@ -48,8 +48,7 @@ Changes to the previous version are marked in [.new]#bold and green.#
 == Restricted cards
 === image:mons/neutral.svg[width=20] [.neutral]#Neutral#
 * https://www.emeralddb.org/card/contested-countryside[Contested Countryside]
-* https://www.emeralddb.org/card/oni-tyrant[Oni Tyrant, role="new line-through"]
-* https://www.emeralddb.org/card/proving-grounds[Proving Grounds, role="new"]
+* https://www.emeralddb.org/card/proving-ground[Proving Ground]
 * https://www.emeralddb.org/card/those-who-serve[Those Who Serve]
 
 
@@ -73,7 +72,7 @@ Changes to the previous version are marked in [.new]#bold and green.#
 == Banned Cards
 
 === image:mons/crane.svg[width=20] [.crane]#Crane#
-* https://www.emeralddb.org/card/doji-diplomat[Dōji Diplomat, role="new"]
+* https://www.emeralddb.org/card/doji-diplomat[Dōji Diplomat]
 * https://www.emeralddb.org/card/festival-for-the-fortunes[Festival for the Fortunes]
 * https://www.emeralddb.org/card/fu-sui-temple[Fū Sui Temple]
 
@@ -87,7 +86,7 @@ Changes to the previous version are marked in [.new]#bold and green.#
 * https://www.emeralddb.org/card/called-to-war[Called to War]
 * https://www.emeralddb.org/card/glorious-victory[Glorious Victory]
 * https://www.emeralddb.org/card/lion-s-pride-paragon[Lion’s Pride Paragon]
-* https://www.emeralddb.org/card/ardent-omoidasu[Ardent Omoidasu, role="new"]
+* https://www.emeralddb.org/card/ardent-omoidasu[Ardent Omoidasu]
 
 === image:mons/phoenix.svg[width=20] [.phoenix]#Phoenix#
 * https://www.emeralddb.org/card/calling-the-storm[Calling the Storm]
@@ -109,23 +108,20 @@ a|
 
 == Restricted cards
 === image:mons/lion.svg[width=20] [.lion]#Lion#
-* https://www.emeralddb.org/card/ardent-omoidasu[Ardent Omoidasu, role="new line-through"]
 * https://www.emeralddb.org/card/feeding-an-army[Feeding an Army]
-* https://www.emeralddb.org/card/hayaken-no-shiro[Hayaken no Shiro, role="new"]
+* https://www.emeralddb.org/card/hayaken-no-shiro[Hayaken no Shiro]
 * https://www.emeralddb.org/card/matsu-sakura[Matsu Sakura]
 
 === image:mons/phoenix.svg[width=20] [.phoenix]#Phoenix#
-* https://www.emeralddb.org/card/asako-kousuke[Asako Kousuke, role="new"]
-* https://www.emeralddb.org/card/guardian-dojo[Guardian Dōjō, role="new line-through"]
+* https://www.emeralddb.org/card/asako-kousuke[Asako Kousuke]
 * https://www.emeralddb.org/card/isawa-tsuke-2[Isawa Tsuke 2]
 * https://www.emeralddb.org/card/secluded-shrine[Secluded Shrine]
 
 
 === image:mons/scorpion.svg[width=20] [.scorpion]#Scorpion#
-* https://www.emeralddb.org/card/bayushi-kachiko-2[Bayushi Kachiko 2, role="new line-through"]
 * https://www.emeralddb.org/card/dispatch-to-nowhere[Dispatch to Nowhere]
 * https://www.emeralddb.org/card/display-of-loyalty[Display of Loyalty]
-* https://www.emeralddb.org/card/sinister-peacekeeper[Sinister Peacekeeper, role="new"]
+* https://www.emeralddb.org/card/sinister-peacekeeper[Sinister Peacekeeper]
 
 === image:mons/unicorn.svg[width=20] [.unicorn]#Unicorn#
 * https://www.emeralddb.org/card/fields-of-rolling-thunder[Fields of Rolling Thunder]
