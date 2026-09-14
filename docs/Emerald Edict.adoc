@@ -34,7 +34,6 @@ Changes to the previous version are marked in [.new]#bold and green.#
 * https://www.emeralddb.org/card/audience-chamber[Audience Chamber]
 * https://www.emeralddb.org/card/city-of-the-rich-frog[City of the Rich Frog]
 * https://www.emeralddb.org/card/enlightenment[Enlightenment]
-* https://www.emeralddb.org/card/gateway-to-meido[Gateway to Meido]
 * https://www.emeralddb.org/card/lost-papers[Lost Papers]
 * https://www.emeralddb.org/card/lurking-affliction[Lurking Affliction]
 * https://www.emeralddb.org/card/oni-tyrant[Oni Tyrant, role="new"]
@@ -74,18 +73,15 @@ Changes to the previous version are marked in [.new]#bold and green.#
 == Banned Cards
 
 === image:mons/crane.svg[width=20] [.crane]#Crane#
-* https://www.emeralddb.org/card/a-new-name[A New Name]
 * https://www.emeralddb.org/card/doji-diplomat[Dōji Diplomat, role="new"]
 * https://www.emeralddb.org/card/festival-for-the-fortunes[Festival for the Fortunes]
 * https://www.emeralddb.org/card/fu-sui-temple[Fū Sui Temple]
-* https://www.emeralddb.org/card/magistrate-station[Magistrate Station]
 
 === image:mons/dragon.svg[width=20] [.dragon]#Dragon#
 * https://www.emeralddb.org/card/belief-in-the-little-teacher[Belief in the Little Teacher]
 * https://www.emeralddb.org/card/centered-breath[Centered Breath]
 * https://www.emeralddb.org/card/shoshi-ni-kie[Shoshi ni Kie]
 * https://www.emeralddb.org/card/phoenix-tattoo[Phoenix Tattoo]
-* https://www.emeralddb.org/card/togashi-mitsu[Togashi Mitsu 1]
 
 === image:mons/lion.svg[width=20] [.lion]#Lion#
 * https://www.emeralddb.org/card/called-to-war[Called to War]
@@ -100,7 +96,6 @@ Changes to the previous version are marked in [.new]#bold and green.#
 * https://www.emeralddb.org/card/isawa-tsuke[Isawa Tsuke 1]
 
 === image:mons/scorpion.svg[width=20] [.scorpion]#Scorpion#
-* https://www.emeralddb.org/card/hidden-moon-dojo[Hidden Moon Dōjō]
 * https://www.emeralddb.org/card/yogo-junzo[Yogo Junzo]
 
 === image:mons/unicorn.svg[width=20] [.unicorn]#Unicorn#
