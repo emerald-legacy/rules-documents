@@ -3,7 +3,7 @@
 :imagesdir: images
 :chapter-label:
 :page-background-image: image:rrg_background_flat.jpg[fit=fill, pdfwidth=100%]
-:revnumber: 6.0
+:revnumber: 6.1
 :revdate: September 8, 2026
 
 = image:el_logo.png[pdfwidth=70%,role=center]pass:q[<br>]Rules Reference
@@ -455,9 +455,8 @@ The phrase "enters play" refers to any time a card makes a transition from an ou
 
 === Ephemeral
 Ephemeral is a keyword ability found on event and attachment cards.
-On events, it means that after the card has been played, it is removed from the game.
-On attachments, it means that when the attachment leaves play, it is removed from the game.
-In either case, effects that would normally put the card in another out-of-play area cannot prevent the card being removed from the game.
+When a card with the Ephemeral keyword would enter the discard pile or leave play, it is removed from the game instead.
+Effects that would normally put the card in another out-of-play area cannot prevent the card being removed from the game.
 
 === Event Cards
 Event cards represent tactical acts and maneuvers, court intrigues, spells, supernatural occurrences, and other unexpected developments that might occur during a game.
