@@ -2932,12 +2932,6 @@ honor, the additional cost cannot be paid, and therefore the
 abilities cannot be triggered.
 
 === [.font-color: green]#Through The Mists#
-==== [.font-color: blue.underline]#Lucky Coin# [.font-color: green]#(11)#
-- During conflicts, Lucky Coin only disables the effects of
-dishonored status tokens. The character is still dishonored.
-However, it doesn't subtract its glory from its skills and its
-controller doesn't lose honor when it leaves play (during a
-conflict).
 
 ==== [.font-color: blue.underline]#Pride# [.font-color: green]#(19)# and [.font-color: blue.underline]#Noble Vanguard# [.font-color: green]#(21)#
 - The attachments created by Pride and Noble Vanguard have no
